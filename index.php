@@ -1,7 +1,7 @@
 <?php
 
 include 'infra/connect.php';
-$sql = "SELECT * FROM pratos";
+$sql = "SELECT * FROM animais";
 $resultado = mysqli_query($conn, $sql);
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,8 +31,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <main>
         <h1>Gerenciador de Animais</h1>
-        <a href="public/cad_animal.php"> Novo Animal</a>
-        <a href="public/cad_user.php"> Novo Usuário</a>
+        <a href="public/cadastrar_animal.php"> Novo Animal</a>
+        <a href="public/cadastrar_usuario.php"> Novo Usuário</a>
         <br>
         <br>
         <form method="POST">
