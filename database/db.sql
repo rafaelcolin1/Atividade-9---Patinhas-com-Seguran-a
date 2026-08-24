@@ -14,7 +14,7 @@ CREATE TABLE animais (
     raca VARCHAR(100),
     porte VARCHAR(50),
     idade INT,
-    id_usuario INT
+  
 
 
 
