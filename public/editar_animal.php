@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "UPDATE animais SET nome = ?, especie = ?, raca = ?, porte = ?, idade = ?, id_usuario = ? WHERE id = ?";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, 'ssdsi', $nome, $especie, $raca, $porte, $idade, $usuario_id, $id);
+    mysqli_stmt_bind_param($stmt, 'ssssiii', $nome, $especie, $raca, $porte, $idade, $usuario_id, $id);
 
     if (mysqli_stmt_execute($stmt)) {
         echo "Animal atualizado com sucesso!";
