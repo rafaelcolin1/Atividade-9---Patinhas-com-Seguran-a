@@ -33,8 +33,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main>
         <h1>Gerenciador de Animais</h1>
-        <a href="public/cadastrar_animal.php"> Novo Animal</a>
-        <a href="public/cadastrar_usuario.php"> Novo Usuário</a>
+        <button><a href="public/cadastrar_animal.php"> Novo Animal</a></button>
+        <button><a href="public/cadastrar_usuario.php"> Novo Usuário</a></button>
         <br>
         <br>
         <form method="POST">
@@ -54,6 +54,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             <br>
             <br>
         </form>
+        <div class="table_animais">
         <table>
             <thead>
                 <tr>
@@ -68,6 +69,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             </thead>
             <tbody>
                 <tr>
+                    </div>
                     <?php
 
                     while ($animal = mysqli_fetch_assoc($resultado)) {
