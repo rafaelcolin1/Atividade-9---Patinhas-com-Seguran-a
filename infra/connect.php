@@ -1,15 +1,14 @@
 <?php
 
-$host = "localhost";
-$usuario = "root";
-$senha = "root";
-$banco = "pet_aumigos_rafael_colin_m1";
+    $host = "localhost";
+    $user = "root";
+    $password = "root";
+    $database = "pet_aumigos_rafael_colin_m1";
+    $conn = mysqli_connect($host, $user, $password, $database);
 
-$conexao = new mysqli($host, $usuario, $senha, $banco);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-if ($conexao->connect_error) {
-    die("Erro na conexão com o banco: " . $conexao->connect_error);
-};
-
-$conexao->set_charset("utf8mb4");
+mysqli_set_charset($conn, "utf8mb4");
 ?>
