@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Erro ao preparar a inserção do animal: ' . mysqli_error($conn));
     }
 
-    mysqli_stmt_bind_param($stmt, 'ssdsi', $nome, $especie, $raca, $porte, $idade, $usuario_id);
+    mysqli_stmt_bind_param($stmt, 'ssssii', $nome, $especie, $raca, $porte, $idade, $usuario_id);
 
     if (mysqli_stmt_execute($stmt)) {
         echo "Animal cadastrado com sucesso!";
