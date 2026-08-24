@@ -7,13 +7,16 @@ CREATE TABLE usuarios (
     email VARCHAR(100)NOT NULL
 );  
 
-create table animais (
-    id int primary key auto_increment,
-    nome varchar(100) not null,
-    especie text not null,
-    raca text not null,
-    porte varchar(50) not null,
-    idade int not null,
+CREATE TABLE animais (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    especie VARCHAR(50) NOT NULL,
+    raca VARCHAR(100),
+    porte VARCHAR(50),
+    idade INT,
+    id_usuario INT
+
+
 
     id_usuario int not null,
     foreign key (id_usuario) references usuarios(id)
