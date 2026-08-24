@@ -26,3 +26,11 @@ form {
 form input, form textarea, form select {
     padding: 2px;
 }
+
+.body_index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+        background-color: #c7a890;
+}

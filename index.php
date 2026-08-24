@@ -29,6 +29,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <div class="body_index">
+
     <main>
         <h1>Gerenciador de Animais</h1>
         <a href="public/cadastrar_animal.php"> Novo Animal</a>
@@ -88,7 +90,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         </table>
     </main>
 
-
+</div>
 </body>
 
 </html>
